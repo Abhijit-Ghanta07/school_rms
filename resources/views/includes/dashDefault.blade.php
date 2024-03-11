@@ -25,7 +25,7 @@
 
       {{-- main section --}}
       <main>
-        <div class="container-fluid">
+        <div class="container-fluid" id="crumb">
           <div class="row my-3">
             <div class="col">
               <ol class="breadcrumb">
@@ -178,6 +178,16 @@
 
     main {
       margin-left: var(--sidebar-width);
+    }
+  }
+
+  @media print {
+    #navbar {
+      display: none !important;
+    }
+
+    #crumb {
+      display: none !important;
     }
   }
 </style>

@@ -19,12 +19,12 @@ Student Fees
           <label for="" class="form-label">
             Search By Student Id
           </label>
-          <input type="text" name="Student_Id" id="Student_Id" class="form-control"> 
+          <input type="text" name="Student_Id" id="Student_Id" class="form-control">
           <button hidden class="btn btn-primary">Search</button>
         </div>
-       
-          
-        
+
+
+
       </form>
     </div>
   </div>
@@ -41,7 +41,7 @@ Student Fees
             <td>Student ID</td>
             <td>Student Name</td>
             <td>Class</td>
-            <td>   </td>
+            <td>Payment Action </td>
             <td>January</td>
             <td>Febuary</td>
             <td>March</td>
@@ -66,87 +66,102 @@ Student Fees
             <td>{{$item->Student_id}}</td>
             <td>{{$item->Student_name}}</td>
             <td>{{$item->Student_class}}</td>
-           <td> <a href="{{route('student.fee_page',['id'=>$item->Student_id])}}" ><button  class="btn btn-success"> Payment</button></a></td>
+            <td> <a href="{{route('student.fee_page',['id'=>$item->Student_id])}}"><button class="btn btn-success">
+                  Payment</button></a></td>
             <td> @if ($item->January)
-             <a href="{{route('student.fee_report',['id'=>$item->January])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button> </a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->January])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button> </a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
-              
+              @endif
+
             </td>
             <td>
               @if ($item->Febuary)
-              <a href="{{route('student.fee_report',['id'=>$item->Febuary])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->Febuary])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
             <td>
               @if ($item->March)
-              <a href="{{route('student.fee_report',['id'=>$item->March])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->March])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
 
             <td> @if ($item->April)
-              <a href="{{route('student.fee_report',['id'=>$item->April])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->April])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif</td>
+              @endif
+            </td>
             <td>
               @if ($item->May)
-              <a href="{{route('student.fee_report',['id'=>$item->May])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->May])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
             <td> @if ($item->June)
-              <a href="{{route('student.fee_report',['id'=>$item->June])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->June])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif</td>
+              @endif
+            </td>
             <td>
               @if ($item->July)
-              <a href="{{route('student.fee_report',['id'=>$item->July])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->July])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
             <td>
               @if ($item->August)
-              <a href="{{route('student.fee_report',['id'=>$item->August])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->August])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
             <td>
               @if ($item->September)
-              <a href="{{route('student.fee_report',['id'=>$item->September])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->September])}}"> <button class="btn btn-success ">PAID
+                  <i class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
             <td>
               @if ($item->October)
-              <a href="{{route('student.fee_report',['id'=>$item->October])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->October])}}"> <button class="btn btn-success ">PAID <i
+                    class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
             <td>
               @if ($item->November)
-              <a href="{{route('student.fee_report',['id'=>$item->November])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->November])}}"> <button class="btn btn-success ">PAID
+                  <i class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
             <td>
               @if ($item->December)
-              <a href="{{route('student.fee_report',['id'=>$item->December])}}"> <button class="btn btn-success ">PAID <i class="bi bi-printer-fill"></i></button></a>
-            @else
+              <a href="{{route('student.fee_report',['id'=>$item->December])}}"> <button class="btn btn-success ">PAID
+                  <i class="bi bi-printer-fill"></i></button></a>
+              @else
               <button class="btn btn-danger">UNPAID <i class="bi bi-cash-coin"></i></button>
-            @endif
+              @endif
             </td>
           </tr>
           @endforeach
@@ -163,85 +178,113 @@ Student Fees
       @csrf
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Enter Fees</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New Student Fees</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="mb-3">
             <label for="" class="form-lable">
               Student ID:
-             <select name="Student_id" id="Student_id" class="form-select">
-               @foreach ($student as $item)
-               <option value={{$item->Student_id}} >{{$item->Student_id}}</option>
-               @endforeach
+              <select name="Student_id" id="Student_id" class="form-select">
+                @foreach ($student as $item)
+                <option value={{$item->Student_id}}>{{$item->Student_id}}</option>
+                @endforeach
               </select>
+            </label>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="" class="form-label">
+              School Admission:
+              <input name="school_admission" id="school_admission" value="0" onkeyup="total()" class="form-date">
             </label>
           </div>
           <div class="mb-3">
             <label for="" class="form-label">
-             School Admission:
-              <input  name="school_admission" id="school_admission" value="0" onkeyup="total()" class="form-date">
-            </label>
-			<label for="" class="form-label">
               Hostel Admission:
-              <input  name="hostel_admission" id="hostel_admission" value="0" onkeyup="total()" class="form-date">
+              <input name="hostel_admission" id="hostel_admission" value="0" onkeyup="total()" class="form-date">
             </label>
-			<label for="" class="form-label">
+          </div>
+
+          <div class="mb-3">
+            <label for="" class="form-label">
               Tuition Fee:
-              <input  name="tution_fee" id="tution_fee" value="0" onkeyup="total()" class="form-date">
-            </label>
-			<label for="" class="form-label">
-              Vehicle Fee:
-              <input  name="vechicle_fee" id="vechicle_fee" value="0" onkeyup="total()" class="form-date">
-            </label>
-			<label for="" class="form-label">
-              Hostel Fee:
-              <input  name="hostel_fee" id="hostel_fee" value="0" onkeyup="total()" class="form-date">
-            </label>
-			<label for="" class="form-label">
-              Exam Fee:
-              <input  name="exam_fee" id="exam_fee" value="0" onkeyup="total()" class="form-date">
-            </label>
-			<label for="" class="form-label">
-              Books:
-              <input  name="book" id="book" value="0" onkeyup="total()" class="form-date">
-            </label>
-			<label for="" class="form-label">
-              Total:
-              <input  name="totel" id="totel" value="0" class="form-date">
-            </label>
-			<label for="" class="form-label">
-              Mode 0f Payment:
-              <select name="Mode" id="" class="form-select">
-                <option value="Cash">Cash</option>
-                <option value="Online">Online</option>
-              </select>
+              <input name="tution_fee" id="tution_fee" value="0" onkeyup="total()" class="form-date">
             </label>
           </div>
           <div class="mb-3">
             <label for="" class="form-label">
-              Month:
-              <select name="Month" id="" class="form-select">
-                <option value="January">January</option>
-                <option value="Febuary">Febuary</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-              </select>
+              Vehicle Fee:
+              <input name="vechicle_fee" id="vechicle_fee" value="0" onkeyup="total()" class="form-date">
             </label>
+
+          </div>
+
+
+          <div class="mb-3">
+            <label for="" class="form-label">
+              Hostel Fee:
+              <input name="hostel_fee" id="hostel_fee" value="0" onkeyup="total()" class="form-date">
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">
+              Exam Fee:
+              <input name="exam_fee" id="exam_fee" value="0" onkeyup="total()" class="form-date">
+            </label>
+          </div>
+
+
+
+          <label for="" class="form-label">
+            Books:
+            <input name="book" id="book" value="0" onkeyup="total()" class="form-date">
+          </label>
+          <div class="mb-3">
+            <label for="" class="form-label">
+              Total:
+              <input name="totel" id="totel" value="0" class="form-date">
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="col-md">
+              <div>
+                <label for="" class="form-label">
+                  Month:
+                  <select name="Month" id="" class="form-select">
+                    <option value="January">January</option>
+                    <option value="Febuary">Febuary</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="col-md">
+              <label for="" class="form-label">
+                Mode 0f Payment:
+                <select name="Mode" id="" class="form-select">
+                  <option value="Cash">Cash</option>
+                  <option value="Online">Online</option>
+                </select>
+              </label>
+            </div>
           </div>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          <button  class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-primary" type="submit">Submit</button>
         </div>
       </div>
     </form>
@@ -263,5 +306,5 @@ Student Fees
    var d = parseInt(school_admission) + parseInt(hostel_admission) + parseInt(tution_fee) + parseInt(vechicle_fee) + parseInt(hostel_fee) + parseInt(exam_fee) + parseInt(book);
     document.getElementById('totel').value = d;
   }
-  </script>
+</script>
 @endsection

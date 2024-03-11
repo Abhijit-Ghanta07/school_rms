@@ -1,4 +1,4 @@
-<div class="row py-2 px-2 justify-content-between navbar-bg text-white sticky-top">
+<div class="row py-2 px-2 justify-content-between navbar-bg text-white sticky-top" id="navbar">
   <div class="col col-md-5">
     <div class="d-flex h-100 gap-3 align-items-center">
       <button type="button" class="btn btn-light d-md-none" aria-pressed="true" data-bs-target="#offcanvasExample"

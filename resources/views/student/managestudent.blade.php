@@ -1,7 +1,7 @@
 {{-- extend default layout --}}
 @extends('includes.dashDefault')
 
-{{-- shoe crumb --}}
+{{-- show crumb --}}
 @section('crumb',"Manage Students")
 
 @section('hero')
@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <div class="table-responsive-xl">
+  <div class="table-responsive">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -56,8 +56,8 @@
           <td>Mobile</td>
           <td>Email</td>
           <td>Address</td>
-		  <td>Vehicle Route</td>
-		  <td>Vehicle No</td>
+          <td>Vehicle Route</td>
+          <td>Vehicle No</td>
           <td>Actions</td>
         </tr>
       </thead>
@@ -76,8 +76,8 @@
           <td>{{$item->Phone}}</td>
           <td>{{$item->Email}}</td>
           <td>{{$item->Address}}</td>
-		  <td>{{$item->VehicleRoute}}</td>
-		  <td>{{$item->VehicleNo}}</td>
+          <td>{{$item->VehicleRoute}}</td>
+          <td>{{$item->VehicleNo}}</td>
           <td class="d-flex gap-3">
             <a><button class="btn btn-warning">View</button></a>
             <a href="{{route('student.update',['id'=>$item->id])}}"><button class="btn btn-primary">Edit</button></a>

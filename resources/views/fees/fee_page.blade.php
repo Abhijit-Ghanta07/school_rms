@@ -9,103 +9,139 @@
   <h2 class="text-center"> Student Fee</h2>
   <form action="{{route('student.fee_pay')}}" method="POST" class="w-75 mx-auto rounded shadow p-3">
     @csrf
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Student Id:
-      </label>
-      <input type="text" name="Student_id" id="Student_id" value="{{$student->Student_id}}" @readonly(true) class="form-control">
-     
 
+    <div class="row mb-3">
+      <div class="col-md">
+        <div>
+          <label for="" class="form-label">
+            Student Id:
+          </label>
+          <input type="text" name="Student_id" id="Student_id" value="{{$student->Student_id}}" @readonly(true)
+            class="form-control">
+
+
+        </div>
+      </div>
+      <div class="col-md">
+        <div>
+          <label for="" class="form-label">
+            Student Name:
+          </label>
+          <input type="text" name="studentname" value="{{$student->Fullname}}" id="studentName" @readonly(true)
+            class="form-control">
+
+
+        </div>
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Student Name:
-      </label>
-      <input type="text" name="studentname" value="{{$student->Fullname}}" id="studentName" @readonly(true) class="form-control">
-     
 
+
+    <div class="row mb-3">
+      <div class="col-md">
+        <div>
+          <label for="" class="form-label">
+            School Admission:
+          </label>
+          <input name="school_admission" id="school_admission" value="0" onkeyup="total()" class="form-control">
+
+
+        </div>
+      </div>
+      <div class="col-md">
+        <div>
+          <label for="" class="form-label">
+            Hostel Admission:
+          </label>
+          <input name="hostel_admission" id="hostel_admission" value="0" onkeyup="total()" class="form-control">
+
+
+        </div>
+      </div>
     </div>
 
-    <div class="mb-3">
-      <label for="" class="form-label">
-        School Admission:
-      </label>
-      <input name="school_admission" id="school_admission" value="0" onkeyup="total()" class="form-control">
+    <div class="row mb-3">
+      <div class="col-md">
+        <div>
+          <label for="" class="form-label">
+            Tuition Fee:
+          </label>
+          <input name="tution_fee" id="tution_fee" value="0" onkeyup="total()" class="form-control">
+
+        </div>
+      </div>
+      <div class="col-md">
+        <div>
+          <label for="" class="form-label">
+            Vehicle Fee:
+          </label>
+          <input name="vechicle_fee" id="vechicle_fee" value="0" onkeyup="total()" class="form-control">
 
 
+        </div>
+      </div>
     </div>
-    
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Hostel Admission:
-      </label>
-      <input name="hostel_admission" id="hostel_admission" value="0" onkeyup="total()" class="form-control">
-     
 
-    </div>
-    
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Tuition Fee:
-      </label>
-      <input name="tution_fee" id="tution_fee" value="0" onkeyup="total()"  class="form-control">
-      
-    </div>
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Vehicle Fee:
-      </label>
-      <input name="vechicle_fee" id="vechicle_fee" value="0" onkeyup="total()" class="form-control">
-    
 
-    </div>
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Hostel Fee:
-      </label>
-      <input name="hostel_fee" id="hostel_fee" value="0" onkeyup="total()" class="form-control">
-     
+    <div class="row mb-3">
+      <div class="col-md">
+        <div class="">
+          <label for="" class="form-label">
+            Hostel Fee:
+          </label>
+          <input name="hostel_fee" id="hostel_fee" value="0" onkeyup="total()" class="form-control">
 
-    </div>
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Exam Fee:
-      </label>
-      <input name="exam_fee" id="exam_fee" value="0" onkeyup="total()" class="form-control">
-     
 
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="">
+          <label for="" class="form-label">
+            Exam Fee:
+          </label>
+          <input name="exam_fee" id="exam_fee" value="0" onkeyup="total()" class="form-control">
+
+
+        </div>
+      </div>
+      <div class="col-md">
+        <div>
+          <label for="" class="form-label">
+            Books:
+          </label>
+          <input name="book" id="book" value="0" onkeyup="total()" class="form-control">
+        </div>
+      </div>
     </div>
-	<div class="mb-3">
-      <label for="" class="form-label">
-        Books:
-      </label>
-      <input name="book" id="book" value="0" onkeyup="total()" class="form-control">
-      
-	 <div class="mb-3">
+
+
+    <div class="mb-3">
       <label for="" class="form-label">
         Total:
       </label>
       <input name="totel" id="totel" value="0" class="form-control">
-     
+
 
     </div>
-    <div class="mb-3">
-      <label for="" class="form-label">
-        Mode 0f Payment:
-      </label>
-      <select name="Mode" id="" class="form-select">
-        <option value="Cash">Cash</option>
-        <option value="Online">Online</option>
-      </select>
-      
+    <div class="row mb-3">
+      <div class="col-md">
+        <div class="">
+          <label for="" class="form-label">
+            Mode 0f Payment:
+          </label>
+          <select name="Mode" id="" class="form-select">
+            <option value="Cash">Cash</option>
+            <option value="Online">Online</option>
+          </select>
 
-    </div>
 
-    <div class="mb-3">
-        <label for="" class="form-label">
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="">
+          <label for="" class="form-label">
             Month:
-        </label>
-        <select name="Month" id="" class="form-select">
+          </label>
+          <select name="Month" id="" class="form-select">
             <option value="January">January</option>
             <option value="Febuary">Febuary</option>
             <option value="March">March</option>
@@ -119,9 +155,14 @@
             <option value="November">November</option>
             <option value="December">December</option>
           </select>
-        
-  
+
+
+        </div>
       </div>
+    </div>
+
+
+
 
     <button class="btn btn-success" type="submit">Submit</button>
   </form>
@@ -144,6 +185,6 @@
     document.getElementById('totel').value = d;
   }
   
-  </script>
+</script>
 
 @endpush
